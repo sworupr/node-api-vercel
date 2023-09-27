@@ -2,17 +2,17 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 // const cors = require('cors')
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-// mongoose.connect('mongodb+srv://sworup:c1MNXl0hxt2EEAHg@cluster0.iqctmc7.mongodb.net/?retryWrites=true&w=majority', {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true
-// });
+mongoose.connect('mongodb+srv://sworup:c1MNXl0hxt2EEAHg@cluster0.iqctmc7.mongodb.net/?retryWrites=true&w=majority', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 
 
 // app.use(cors())
-app.use(express.static('public'))
+// app.use(express.static('public'))
 app.use(bodyParser.urlencoded({
   extended: false
 }))

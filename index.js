@@ -2,10 +2,12 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
- let mongoose;
-try
-{
-  mongoose = require('mongoose');}
+app.use(cors())
+
+let mongoose;
+try {
+  mongoose = require('mongoose');
+}
 catch (err) {
   console.log(err)
 }
@@ -15,12 +17,12 @@ mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
-.then(()=>{
-  console.log('banzai')
-})
-.catch((err)=>{
-  res.json(err)
-})
+  .then(() => {
+    console.log('banzai')
+  })
+  .catch((err) => {
+    res.json(err)
+  })
 
 
 
@@ -33,7 +35,7 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html')
 });
 
-app.get('/testing', (Req,res)=> {
+app.get('/testing', (Req, res) => {
   res.json('hello world')
 })
 

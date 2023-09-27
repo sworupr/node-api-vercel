@@ -2,7 +2,13 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
-// const mongoose = require('mongoose');
+ let mongoose;
+try
+{
+  mongoose = require('mongoose');}
+catch (err) {
+  console.log(err)
+}
 
 // const MONGO_URI = 'mongodb+srv://sworup:c1MNXl0hxt2EEAHg@cluster0.iqctmc7.mongodb.net/?retryWrites=true&w=majority'
 // mongoose.connect(MONGO_URI, {

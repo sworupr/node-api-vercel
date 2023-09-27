@@ -12,10 +12,9 @@ mongoose.connect(MONGO_URI, {
 .then(()=>{
   console.log('banzai')
 })
-.catch(err){
+.catch((err)=>{
   res.json(err)
-}
-;
+})
 
 
 

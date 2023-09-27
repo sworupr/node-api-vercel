@@ -10,17 +10,17 @@ catch (err) {
   console.log(err)
 }
 
-// const MONGO_URI = 'mongodb+srv://sworup:c1MNXl0hxt2EEAHg@cluster0.iqctmc7.mongodb.net/?retryWrites=true&w=majority'
-// mongoose.connect(MONGO_URI, {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true
-// })
-// .then(()=>{
-//   console.log('banzai')
-// })
-// .catch((err)=>{
-//   res.json(err)
-// })
+const MONGO_URI = 'mongodb+srv://sworup:c1MNXl0hxt2EEAHg@cluster0.iqctmc7.mongodb.net/?retryWrites=true&w=majority'
+mongoose.connect(MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(()=>{
+  console.log('banzai')
+})
+.catch((err)=>{
+  res.json(err)
+})
 
 
 
